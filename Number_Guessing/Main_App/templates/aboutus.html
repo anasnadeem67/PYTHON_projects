@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f2f2f2;
+        }
+        .navbar{
+            background-color: #4318b8;
+        }
+        .navbar-brand {
+            margin-left: 15px;
+        }
+        .navbar-nav {
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        h1 {
+            margin-top: 100px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .p1 {
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{% url 'guess_number' %}"><b>NUMBER GUESSING</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'guess_number' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                   
+                    <li class="nav-item">
+                        <a class="nav-link"  aria-current="page" href="{% url 'aboutus' %}">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>
+            The Number Guessing Game is a fun and interactive game where the player tries to guess a randomly generated number within a specified range. It is a simple yet engaging game that tests the player's logic and intuition.
+        </p>
+        <p class="p1">
+            <b>Features:</b><br><br>
+
+                1. Random Number Generation: The program generates a random number between 0 and 999 for the player to guess.<br>
+                2. Multiple Attempts: The player is given a certain number of attempts to guess the correct number.<br>
+                3. Hint System: If the player's guess is incorrect, the program provides hints to guide the player. It indicates whether the actual number is greater or smaller than the guessed number.<br>
+                4. Interactive Interface: The program has an attractive and user-friendly interface to enhance the gaming experience.<br>
+                5. Winning Condition: When the player guesses the correct number, the program displays a message indicating that the player has won.<br>
+                6. Losing Condition: If the player runs out of attempts without guessing the correct number, the program displays a message indicating that the player has lost and reveals the actual number.<br>
+                7. Replay Option: After each game, the program gives the player the choice to play again. If selected, a new random number is generated, and the game restarts.<br>
+                8. Range Limit: The numbers to be guessed are limited to the range of 0 to 999, ensuring a challenging yet manageable gameplay experience.<br><br>
+
+                <b>How to Play:</b><br><br>
+
+                1. The computer will generate a random number between 0 and 999. This number will be the target number that the player needs to guess.<br>
+                2. The player will be prompted to enter their guess.<br>
+                3. The player enters a number as their guess. <br>
+                4. The computer will check if the player's guess is equal to the target number. <br>
+                5. If the guess is correct, the player wins the game and receives a congratulatory message. The game ends. <br>
+                6. If the guess is incorrect, the computer will provide a hint to the player about whether the target number is greater or smaller than their guess.<br>
+                7. The player will have a few more chances to guess the correct number. The number of chances can be predefined or based on your preference. <br>
+                8. Steps 3 to 7 will be repeated until one of the following conditions is met:
+                a. The player guesses the correct number.
+                b. The player runs out of chances without guessing the correct number.<br>
+                9. If the player runs out of chances without guessing the correct number, the computer will reveal the target number and display a message indicating that the player has lost the game.<br>
+                10. After the game ends, the player can choose to play again or exit the game.
+        </p>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
